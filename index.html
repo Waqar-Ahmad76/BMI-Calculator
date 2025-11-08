@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>BMI-Calculator</title>
+</head>
+
+<body class="  flex flex-col items-center justify-center h-screen bg-gray-700 font-sans px-4">
+
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-6 mt-12 md:mt-0 text-center my-6">BMI-Calculator</h1>
+
+
+    <main class="p-5 rounded-xl shadow-xl w-full max-w-sm bg-white">
+
+        <form id="bmi-form">
+
+            <div class="height-container mb-4">
+                <label for="height" class="block text-sm font-medium text-gray-700 mb-2">Height (cm):</label>
+                <input name="height" id="height" type="text" placeholder="e.g., 175"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150">
+            </div>
+
+            <div class="weight-container mb-6">
+                <label for="weight" class="block text-sm font-medium text-gray-700 mb-2">Weight (kg):</label>
+                <input type="text" name="weight" id="weight" placeholder="e.g., 70"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150">
+            </div>
+
+            <button type="submit" id="calculate-btn"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg transition duration-150 mt-4">
+                Calculate BMI
+            </button>
+
+        </form>
+        <div id="result" class="mt-4 text-center text-xl font-semibold text-gray-800"></div>
+            <div class="bmi-scale mt-6 border-t pt-4">
+                <h3 class="text-lg font-semibold mb-3 text-gray-800">BMI Categories</h3>
+
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between items-center p-2 rounded-md bg-blue-100">
+                        <span class="font-medium text-blue-800">Underweight:</span>
+                        <span class="text-blue-800 font-mono">&lt; 18.5</span>
+                    </div>
+
+                    <div class="flex justify-between items-center p-2 rounded-md bg-green-100">
+                        <span class="font-medium text-green-800">Normal Weight:</span>
+                        <span class="text-green-800 font-mono">18.5 – 24.9</span>
+                    </div>
+
+                    <div class="flex justify-between items-center p-2 rounded-md bg-yellow-100">
+                        <span class="font-medium text-yellow-800">Overweight:</span>
+                        <span class="text-yellow-800 font-mono">25 – 29.9</span>
+                    </div>
+
+                    <div class="flex justify-between items-center p-2 rounded-md bg-red-100">
+                        <span class="font-medium text-red-800">Obesity:</span>
+                        <span class="text-red-800 font-mono">&ge; 30</span>
+                    </div>
+                </div>
+            </div>
+        
+
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
